@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+
+	
+<!-- Mirrored from kurtulusahmet.github.io/swift/2016/07/06/swift-coklu-dil-destegi.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Aug 2017 21:43:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <meta content="IOS(Swift) - Çoklu Dil Desteği" name="description">
+    
+    
+      <meta name="keywords" content="swift,language,multilanguage,support">
+    
+    <meta name="author" content="Kurtuluş Ahmet">
+
+    <title>
+      
+          kurtulusahmet|IOS Uygulamaları için Çoklu Dil Desteği
+      
+    </title>
+    <!-- favicon
+    <link rel="shortcut icon" href="/static/img/favicon.ico"> -->
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="../../../../static/css/animate.css" rel="stylesheet">
+    <link href="../../../../static/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../../static/font-mfizz/font-mfizz.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../../../../static/css/style.css" rel="stylesheet">
+
+    <!-- Toastr style -->
+    <link href="../../../../static/css/plugins/toastr/toastr.min.css" rel="stylesheet">
+
+    <!-- Gritter -->
+    <link href="../../../../static/js/plugins/gritter/jquery.gritter.css" rel="stylesheet">
+    <link href="../../../../static/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../../search/css/cb-search.css">
+
+	<!-- Mainly scripts -->
+	<script src="../../../../static/js/jquery-2.1.1.js"></script>
+
+  <script src="../../../../search/js/bootstrap3-typeahead.min.js"></script>
+
+  <!-- cb-search -->
+  <script src="../../../../search/js/cb-search.js"></script>
+
+      <script>
+      $(function(){
+          $("pre").css('display','block');
+      });
+      </script>
+
+  <!-- Mainly scripts -->
+	<script src="../../../../static/js/bootstrap.min.js"></script>
+	<script src="../../../../static/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+	<script src="../../../../static/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+  <!-- Peity -->
+  <script src="../../../../static/js/plugins/peity/jquery.peity.min.js"></script>
+
+	<!-- Custom and plugin javascript -->
+	<script src="../../../../static/js/inspinia.js"></script>
+	<script src="../../../../static/js/plugins/pace/pace.min.js"></script>
+
+  <!-- Rickshaw -->
+  <script src="../../../../static/js/plugins/rickshaw/vendor/d3.v3.js"></script>
+  <script src="../../../../static/js/plugins/rickshaw/rickshaw.min.js"></script>
+
+  <!-- i18next -->
+  <script src="../../../../static/js/plugins/i18next/i18next.min.js"></script>
+
+	<script src="../../../../static/js/plugins/wow/wow.min.js"></script>
+
+  <!-- jPages -->
+  <script src="../../../../static/js/jPages.js"></script>
+  <script src="../../../../static/js/js.js"></script>
+  <script type="text/javascript">
+        $(function(){
+          /* initiate the plugin */
+          $("div.pag-holder").jPages({
+              containerID  : "pag-itemContainer",
+              perPage      : 5,  /* num of items per page */
+              startPage    : 1,
+              startRange   : 1,
+              midRange     : 3,
+              endRange     : 1
+          });
+      });
+  </script>
+
+  <!-- Baidu analytics -->
+
+
+  <!-- Google analytics -->
+
+</head>
+
+	<body id="page-top" class="landing-page">
+
+	
+	    <div class="search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="form-control search-content" id="search-content" style="position: fixed; top: 60px" 
+           placeholder="Search Blog"
+           >
+
+    <div style="position: fixed; top: 16px; right: 16px; z-index: 9999;">
+        <img src="../../../../search/img/cb-close.png"  id="close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px; z-index: 9999;">
+    <img src="../../../../search/img/cb-search.png"  id="search-btn"  title="Double click Ctrl"/>
+</div>
+
+
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../../../index.html">kurtulusahmet</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="../../../../blog/index.html">Home</a></li>
+
+                        
+                            <li>
+                        
+                            <a class="page-scroll" href="../../../../android/index.html">Android</a></li>
+
+                        
+                            <li>
+                        
+                            <a class="page-scroll" href="../../../index.html">Swift</a></li>
+
+                        
+                            <li>
+                        
+                            <a class="page-scroll" href="../../../../log-intern/index.html">Log.intern()</a></li>
+
+                        
+                            <li>
+                        
+                            <a class="page-scroll" href="../../../../symfony/index.html">Symfony</a></li>
+
+                        
+                        <li>
+                            
+                            <a class="page-scroll" href="../../../../life/index.html">Life</a></li>
+
+                        
+                            <li>
+                        
+                            <a class="page-scroll" href="../../../../other/index.html">Other</a></li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image wow zoomIn">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back one"></div>
+
+        </div>
+    </div>
+</div>
+
+	
+
+    <div class="wrapper wrapper-content  animated fadeInRight article">
+    <div class="row">
+        <div class="col-lg-10 col-lg-offset-1">
+            <div class="ibox">
+                <div class="ibox-content">
+                    <div class="pull-right">
+                    	
+                        	<button class="btn btn-white btn-xs" type="button">Swift</button>
+                        
+                    </div>
+                    <div class="text-center article-title">
+                    <span class="text-muted"><i class="fa fa-clock-o"></i> 6 Jul 2016</span>
+                        <h1>
+                            IOS Uygulamaları için Çoklu Dil Desteği
+                        </h1>
+                    </div>
+                    	<p>Geliştirdiğiniz uygulamalara geliştirme dili dışından yeni diller eklemek isteyebilirsiniz. Bunun için ufak bir kaç düzenleme yapmanız gerekecek. Şimdi sizlerle adım adım ios uygulamamıza çoklu dil desteği sağlayacağız. Bunun için yeni bir proje oluşturalım.</p>
+
+<p>Çoklu dil desteğini iki farklı şekilde sağlayabilirsiniz. Bunlardan biri direk storyboard üzerindeki <strong>Object ID</strong> değeri üzerinden yapılır, diğeri de ekstra bir dil dosyası ile sağlanır.</p>
+
+<p>Projemizi oluşturduktan sonra proje ayarları kısmından sol üst köşeye tıklayıp <strong>Project</strong> başlığı altındaki proje ismine tıklıyoruz.</p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot1.png" height="600" width="900" /></p>
+
+<p>Ardından <strong>Localizations</strong> sekmesinden <strong>( + )</strong> ikonuna tıklayarak destek vereceğimiz dili seçiyoruz. Benim oluşturduğum uygulama, geliştirme dili olarak İngiliz kullandığından ben destek vereceğim dil olarak <strong>Turkish(tr)</strong> seçiyorum. Dil seçimini yaptıktan sonra proje klasör yapımız ve <strong>Main.string</strong> dosyamız aşağıdaki gibi olacaktır. Eğer daha öncesinden storyboard içerisine ekleme yaptıysanız Main.string dosyamıza otomatik olarak Object ID ile aktarılacaktır.</p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot2.png" height="600" width="900" /></p>
+
+<p>Ben daha öncesinde storyboard dosyasına birer adet NavigationBar, Textfield, Label ve Button ekledim.</p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot3.png" height="600" width="900" /></p>
+
+<p><strong>Main.string</strong> dosyamız aşağıdaki gibi değiştirdikten sonra uygulamamızı cihaz dili Türkçe ve İngilizce iken açtığımızda görüntü şöyle olaraktır.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="cm">/* Class = "UINavigationItem"; title = "Title"; ObjectID = "FrW-rv-KU8"; */</span>
+<span class="s">"FrW-rv-KU8.title"</span> <span class="o">=</span> <span class="s">"Başlık"</span><span class="p">;</span>
+
+<span class="cm">/* Class = "UIButton"; normalTitle = "Button (English)"; ObjectID = "LUq-Iq-Vnc"; */</span>
+<span class="s">"LUq-Iq-Vnc.normalTitle"</span> <span class="o">=</span> <span class="s">"Button (Türkçe)"</span><span class="p">;</span>
+
+<span class="cm">/* Class = "UILabel"; text = "Label (English)"; ObjectID = "gmX-2l-bHv"; */</span>
+<span class="s">"gmX-2l-bHv.text"</span> <span class="o">=</span> <span class="s">"Label (Türkçe)"</span><span class="p">;</span>
+
+<span class="cm">/* Class = "UITextField"; placeholder = "UITextfield (English)"; ObjectID = "zxm-iD-cZl"; */</span>
+<span class="s">"zxm-iD-cZl.placeholder"</span> <span class="o">=</span> <span class="s">"UITextfield (Türkçe)"</span><span class="p">;</span>
+</code></pre>
+</div>
+
+<p><strong>Ekran Görüntüleri</strong></p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot4.png" height="590" width="330" />  
+<img src="../../../../static/img/blog/swift/mlscreenshot5.png" height="590" width="330" /></p>
+
+<p>Burda işlem tamam. Şimdi en başta bahsettiğimiz ekstra dil dosyasını kullanarak uygulamamıza çoklu dil desteğini sağlayalım. Bunun için <strong>New File -&gt; Resource -&gt; String File</strong> yolunu kullanarak <strong>Localizable</strong> isimli bir string dosyası oluşturuyoruz. Dosya üzerine tıkladıktan sonra sağ tarafta bulunan kısımdan <strong>Localize..</strong> işlemini gerçekleştiriyoruz. (Tanımlı diller için ayrı string dosyalarının otomatik olarak tanımlanmasını sağlıyoruz)</p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot6.png" height="400" width="450" />  
+<img src="../../../../static/img/blog/swift/mlscreenshot7.png" height="400" width="450" /></p>
+
+<p>Bu işlemlerin ardından destek verdiğimiz dillere ait <strong>Localizable.string</strong> dosyalarını aşağıdaki gibi düzenliyoruz. Burada dikkat etmemiz gereken bir nokta var. Anahtar değer yapısında çalışan bu kısımda iki dosya içinde sol tarafta bulunan anahtar değerinin aynı olmasına dikkat ediyoruz.</p>
+
+<p><strong>Localizable.string (English)</strong></p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="cm">/* 
+  Localizable.strings
+  MultiLanguageSupport
+
+  Created by Kurtulus Ahmet on 6.07.2016.
+  Copyright © 2016 Kurtulus Ahmet. All rights reserved.
+*/</span>
+
+<span class="s">"alert_title"</span> <span class="o">=</span> <span class="s">"English"</span><span class="p">;</span>
+<span class="s">"alert_btn"</span> <span class="o">=</span> <span class="s">"OK"</span><span class="p">;</span>
+</code></pre>
+</div>
+<p><strong>Localizable.string (Turkish)</strong></p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="cm">/* 
+  Localizable.strings
+  MultiLanguageSupport
+
+  Created by Kurtulus Ahmet on 6.07.2016.
+  Copyright © 2016 Kurtulus Ahmet. All rights reserved.
+*/</span>
+
+<span class="s">"alert_title"</span> <span class="o">=</span> <span class="s">"Türkçe"</span><span class="p">;</span>
+<span class="s">"alert_btn"</span> <span class="o">=</span> <span class="s">"Tamam"</span><span class="p">;</span>
+</code></pre>
+</div>
+<p>Dosyalarımızı düzenledikten sonra Alert Controller çağırımı gerçekleştiriyoruz. Burada alert başlığını ve buton başlığını Localizable dosyalarımızdan çekmek için <strong>NSLocalizedString</strong> yapısını kullanıyoruz. Burada verileri anahtar değerimize ve cihaz dilimize göre uygun olan dosyadan çekiyoruz.</p>
+
+<div class="language-swift highlighter-rouge"><pre class="highlight"><code><span class="k">let</span> <span class="nv">titleString</span> <span class="o">=</span> <span class="kt">NSLocalizedString</span><span class="p">(</span><span class="s">"alert_title"</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span><span class="s">""</span><span class="p">)</span> <span class="c1">// Dil dosyalarından uygun başlığı çekiyor</span>
+        
+<span class="k">let</span> <span class="nv">btnString</span> <span class="o">=</span> <span class="kt">NSLocalizedString</span><span class="p">(</span><span class="s">"alert_btn"</span><span class="p">,</span> <span class="nv">comment</span><span class="p">:</span><span class="s">""</span><span class="p">)</span> <span class="c1">// Dil dosyalarından uygun buton başlığını çekiyor</span>
+        
+<span class="k">let</span> <span class="nv">alert</span> <span class="o">=</span> <span class="kt">UIAlertController</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="n">titleString</span><span class="p">,</span> <span class="nv">message</span><span class="p">:</span> <span class="s">""</span><span class="p">,</span> <span class="nv">preferredStyle</span><span class="p">:</span> <span class="o">.</span><span class="kt">Alert</span><span class="p">)</span>
+        
+<span class="n">alert</span><span class="o">.</span><span class="nf">addAction</span><span class="p">(</span><span class="kt">UIAlertAction</span><span class="p">(</span><span class="nv">title</span><span class="p">:</span> <span class="n">btnString</span><span class="p">,</span> <span class="nv">style</span><span class="p">:</span> <span class="o">.</span><span class="kt">Default</span><span class="p">,</span> <span class="nv">handler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">action</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
+            
+<span class="p">}))</span>
+        
+<span class="k">self</span><span class="o">.</span><span class="nf">presentViewController</span><span class="p">(</span><span class="n">alert</span><span class="p">,</span> <span class="nv">animated</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
+</code></pre>
+</div>
+
+<p>Gerekli düzenlemeleri yaptıktan sonra uygulamaları çalıştırdığımızda ekran görüntüleri aşağıdaki gibi olacaktır.</p>
+
+<p><img src="../../../../static/img/blog/swift/mlscreenshot8.png" height="590" width="330" />  
+<img src="../../../../static/img/blog/swift/mlscreenshot9.png" height="590" width="330" /></p>
+
+<p>Umarım işinize yarar. Kolay gelsin.</p>
+
+
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                                <h5>Tags:</h5>
+                                
+                                    <button class="btn btn-white btn-xs" type="button">swift</button>
+                                
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            
+                                <div id="disqus_thread"></div>
+<script>
+    /** * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION
+     * BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS. * LEARN WHY
+     * DEFINING THESE VARIABLES IS IMPORTANT:
+     * https://disqus.com/admin/universalcode/#configuration-variables */
+
+    /* var disqus_config = function () {
+     this.page.url = PAGE_URL; // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     }; */
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+
+    s.src = '../../../../../kurtulusahmet.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+</noscript>
+                            
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+	
+	    
+<script id="cy_cmt_num" src="../../../../../changyan.sohu.com/upload/plugins/plugins.list.count4d28.js?clientId=cysfY7ULn"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function(event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+</script>
+
+	
+
+</body>
+	<script id="dsq-count-scr" src="../../../../../kurtulusahmet.disqus.com/count.js" async></script>
+
+<!-- Mirrored from kurtulusahmet.github.io/swift/2016/07/06/swift-coklu-dil-destegi.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Aug 2017 21:45:10 GMT -->
+</html>
