@@ -1,0 +1,16 @@
+<resources>
+    <string name="locale">ru</string>
+    <string name="app_name">Babylon</string>
+    <string name="name">ru_Arman</string>
+    <string name="newOne">ru_NEWONE</string>
+    <string name="second">ru_SECOND</string>
+    <string name="thi">ru_THI</string>
+    <string name="wow">ru_WOWW</string>
+    <string name="four">ru_FOUR</string>
+    <string name="five">ru_FIVE</string>
+    <string name="dummy">ru_DUMMY</string>
+    <string name="just">ru_JUST</string>
+    <string name="testing">ru_TESTING</string>
+    <string name="HackerLand">ru_HACKERLAND </string>
+    <string name="friendlyName">ru_FRIENDLYNAME </string>
+</resources>
